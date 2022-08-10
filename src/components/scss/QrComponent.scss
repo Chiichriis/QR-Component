@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(../font/Outfit-VariableFont_wght.ttf);
+}
+
+$fontFamily: Outfit;
+$White: hsl(0, 0%, 100%);
+$Light-gray: hsl(212, 45%, 89%);
+$Grayish-blue: hsl(220, 15%, 55%);
+$Dark-blue: hsl(218, 44%, 22%);
+
+.qr-card{
+    background-color: $Light-gray;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container{
+        background-color: $White;
+        padding: 1rem;
+        font-family: $fontFamily;
+        border-radius: 1rem;
+        margin: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: .7rem;
+            margin: 0 0 1rem;
+        }
+
+        .text-area{
+            text-align: center;
+            padding: 1rem;
+
+            .bold-font{
+                font-weight: 700;
+                font-size: 1.5rem;  
+                color: $Dark-blue;
+            }
+
+            .normal-font{
+                font-weight: 400;
+                font-size: 1rem;
+                margin: 1rem 0;
+                color: $Grayish-blue;
+            }
+        }
+
+       
+    }
+}
+
+@media (min-width: 800px) {
+    .qr-card{
+    
+        .container{
+            height: 550px;
+            width: 350px;
+   
+        }
+    }
+}
